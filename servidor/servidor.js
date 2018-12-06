@@ -35,6 +35,11 @@ app.use(express.static('public'))
 
 app.use(bodyParser.urlencoded({extended: false}));
 
+    app.get('/principal', (req, res) =>{
+      res.render('inicio1')
+    });
+
+
 app.get('/inicio', (req, res) =>{ 
 res.render('inicio')
     res.send('<h1>Packtex<h1/>');
@@ -101,9 +106,6 @@ res.render('inicio')
         });
     });
 
-    app.get('/principal', (req, res) =>{
-      res.render('inicio1')
-    });
 
 
 
