@@ -89,7 +89,7 @@ res.render('inicio')
               correo: resultado.rows[0].correo,
             };
             console.log(usuario);
-            res.get('/principal')
+            res.send('Se ha iniciado sesion')
                
               
           } else {
