@@ -101,6 +101,10 @@ res.render('inicio')
         });
     });
 
+    app.get('/inicio1', (req, res) =>{
+      res.render('inicio1')
+    });
+
 
 
 app.listen(port, () =>{ 
