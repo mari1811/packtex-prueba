@@ -101,7 +101,7 @@ res.render('inicio')
         });
     });
 
-    app.get('/inicio1', (req, res) =>{
+    app.get('/principal', (req, res) =>{
       res.render('inicio1')
     });
 
