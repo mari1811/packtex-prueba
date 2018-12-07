@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({extended: false}));
       res.render('inicio1') 
     });
     app.get('/principal', (req, res) =>{
-     res.redirect('/login')    
+     res.send('/login')    
     });
 
 app.get('/orden', (req, res) =>{
