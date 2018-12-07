@@ -36,7 +36,10 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: false}));
 
     app.get('/principal', (req, res) =>{
-      res.render('inicio1')
+      res.render('inicio1') 
+    });
+    app.get('/principal', (req, res) =>{
+     res.redirect('/login')    
     });
 
 app.get('/orden', (req, res) =>{
