@@ -39,6 +39,10 @@ app.use(bodyParser.urlencoded({extended: false}));
       res.render('inicio1')
     });
 
+app.get('/orden', (req, res) =>{
+  res.render('orden')
+});
+
 
 app.get('/inicio', (req, res) =>{ 
 res.render('inicio')
