@@ -109,7 +109,7 @@ res.render('inicio')
           }
         }).catch((err) => {
           console.log('err: ', err);
-          res.send('Ocurrio un error');
+          res.redirect('/login')
         });
     });
 
