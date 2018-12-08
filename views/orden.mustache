@@ -32,20 +32,31 @@
         <form action="/orden" method="post">
 
               <div class="form-group">
-              <input name ="nombre" class="form-control input-lg" type="text" placeholder="Nombre">
+	      <text>Direccion de recoleccion: </text>
+              <input name ="direccionRecoleccion" class="form-control input-lg" type="text" placeholder=" ">
               </div>
 					    <div class="form-group">
-              <input name="apellido" class="form-control input-lg" type="text" placeholder="Apellido">
+	<text>Peso del paquete: </text>			    
+              <input name="peso" class="form-control input-lg" type="text" placeholder="">
 						  </div>
               <div class="bootstrap-iso">
 					    <div class="form-group">
-              <input name="correo" type="email" class="form-control input-lg" id="exampleInputEmail1" placeholder="E-mail">
+		<text>Direccion de entrega: </text>			    
+              <input name="deireccionEntrega" type="text" class="form-control input-lg" placeholder="">
               </div>
               <div class="form-group">
-              <input name="clave" type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Clave">
+	      <text>Descripcion: </text>
+              <input name="descripcion" type="text" class="form-control input-lg"  placeholder="">
               </div>
-              <a href="/login" ><button type="submit" class="btn btn-danger btn-lg"id="regresar">Regresar</button></a>
-              <button type="submit" class="btn btn-success btn-lg"id="registrar">Registrar</button>
+	      <div class="form-group">
+	      <text>Datos: </text>
+              <input name="nombre" type="text" class="form-control input-lg"  placeholder="">
+              </div>
+	      <div class="form-group">
+              <input name="apellido" type="text" class="form-control input-lg"  placeholder="">
+              </div>
+              <a href="/principal" ><button type="submit" class="btn btn-danger btn-lg"id="regresar">Regresar</button></a>
+              <a href="/principal" ><button type="submit" class="btn btn-success btn-lg"id="registrar">Registrar</button></a>
 
 				</form>
                         </div>
