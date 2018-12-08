@@ -101,7 +101,7 @@ res.render('inicio')
               correo: resultado.rows[0].correo,
             };
             console.log(usuario);
-            res.send('ha iniciado sesion')
+            res.redirect('/registro')
                
               
           } else {
