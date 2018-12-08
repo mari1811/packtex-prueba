@@ -101,11 +101,11 @@ res.render('inicio')
               correo: resultado.rows[0].correo,
             };
             console.log(usuario);
-            res.redirect('/inicio')
+            res.send('ha iniciado sesion')
                
               
           } else {
-            res.send('contraña incorrecta')
+            res.redirect('/login')
           }
         }).catch((err) => {
           console.log('err: ', err);
