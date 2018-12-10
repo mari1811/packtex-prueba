@@ -63,8 +63,8 @@ res.render('inicio')
     cliente.connect()
       .then(() => {
      
-        const sqlUsuario = 'INSERT INTO usuario (nombre, apellido, correo, clave ) VALUES($1, $2, $3, $4 );'
-        const parametrosUsuario = [req.body.nombre, req.body.apellido, req.body.correo, req.body.clave]
+          const sqlUsuario = 'INSERT INTO usuario (nombre, apellido, fecha_de_nacimiento, correo, clave ) VALUES($1, $2, $3, $4, $5);'
+        const parametrosUsuario = [req.body.nombre, req.body.apellido, req.body.fecha_de_nacimiento, req.body.correo, req.body.clave]
         var resultado = {
           usuario:cliente.query(sqlUsuario, parametrosUsuario)
         }
