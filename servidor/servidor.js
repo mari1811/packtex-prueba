@@ -47,6 +47,9 @@ app.get('/orden', (req, res) =>{
   res.render('orden')
 });
 
+ app.get('/mapa', (req, res) =>{
+   res.render('mapa')
+ });
 
 app.get('/inicio', (req, res) =>{ 
 res.render('inicio')
