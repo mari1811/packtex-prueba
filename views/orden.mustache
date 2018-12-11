@@ -20,7 +20,7 @@
 
    <center><img style="float:top; margin:1px;" alt="" src="http://ferraratattooconvention.it/tatuatori/view/img/marker.svg" width="70" height="70" />
    </center> <font face="SimSun-ExtB" size="7" color="black"> <center id="titulo2">PackTex</center></font>
- </center> <font face="SimSun-ExtB" size="5" color="black"> <center id="texto">Coloque los datos de la direccion :</center></font>
+ </center> <font face="SimSun-ExtB" size="5" color="black"> <center id="texto">Coloque los datos de su orden:</center></font>
   <center> <div  class="container well"id="contendor">
 	<div id="orden">
 
@@ -32,24 +32,24 @@
         <form action="/orden" method="post">
 
               <div class="form-group">
-	      <text>Direccion de recoleccion: </text>
+	      <text>Dirección de recolección: </text>
               <input name ="direccionRecoleccion" class="form-control input-lg" type="text" placeholder=" ">
               </div>
 					    <div class="form-group">
-	<text>Peso del paquete: </text>			    
-              <input name="peso" class="form-control input-lg" type="text" placeholder="">
+	<text>Peso del paquete (kg): </text>			    
+              <input name="peso" pattern="[0-9]{10}" class="form-control input-lg" type="text" placeholder="">
 						  </div>
               <div class="bootstrap-iso">
 					    <div class="form-group">
-		<text>Direccion de entrega: </text>			    
+		<text>Dirección de entrega: </text>			    
               <input name="deireccionEntrega" type="text" class="form-control input-lg" placeholder="">
               </div>
               <div class="form-group">
-	      <text>Descripcion: </text>
+	      <text>Descripción del lugar: </text>
               <textarea name="descripcion" class="form-control" maxlength="140" rows="5" placeholder=""></textarea>
               </div>
 	      <div class="form-group">
-	      <text>Datos: </text>
+	      <text>Nombre de destinatario: </text>
               <input name="nombre" type="text" class="form-control input-lg"  placeholder="Nombre">
               </div>
 	      <div class="form-group">
