@@ -63,7 +63,7 @@ res.render('inicio')
   });
 
   app.post('/orden',(req, res) =>{
-    const paquete = new Client();
+    const paquete = new Paquete();
     paquete.connect()
     .then(()=>
   }
