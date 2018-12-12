@@ -57,9 +57,25 @@ res.render('inicio')
 
  });
 
+
   app.get('/registro', (req, res) =>{
     res.render('registro1')
   });
+
+  app.post('/orden',(req, res) =>{
+    const paquete = new Client();
+    paquete.connect()
+    .then(()=>
+  }
+
+  const sqlPaquete = 'INSERT INTO paquete (peso_paquete) VALUES($1);'
+  const parametrosPaquete = [req.body.peso_paquete]
+  var resultado{
+    paquete:cliente.query(sqlPaquete, parametrosPaquete)
+  }
+  return resultado;
+});
+
 
   app.post('/registro', (req, res) =>{
     const cliente = new Client();
