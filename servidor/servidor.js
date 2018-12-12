@@ -53,7 +53,7 @@ app.get('/orden', (req, res) =>{
 
 app.get('/inicio', (req, res) =>{ 
 res.render('inicio')
-    res.send('<h1>Packtex<h1/>');
+    res.redirect('/login');
 
  });
 
