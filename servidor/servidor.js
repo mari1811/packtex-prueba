@@ -5,7 +5,7 @@ var express = require('express'),
 const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
 const {Client} = require('pg');
-const {Paquete} = requiew('pg');
+const {Paquete} = requie('pg');
 const pgCamelCase = require('pg-camelcase');
 const jwt = require('jsonwebtoken');
 
