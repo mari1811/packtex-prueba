@@ -1,0 +1,40 @@
+#body{
+}
+
+.fondo{
+	
+}
+
+.caja_1{
+	background-color: #B0FFC3;
+	width:400px;
+	height: 400px;
+	margin-left: 5%;
+	margin-right: 0%;
+	padding: 15px;
+	position: relative;
+	float: left;
+}
+
+.caja_2{
+	background-color: #B0FFC3;
+	width:400px;
+	height: 400px;
+	margin-left: 40%;
+	margin-right: 0%;
+	padding: 15px;
+	position: relative;
+}
+
+#titulo2{
+    margin-top:5px;
+
+}
+#registrar{
+    
+     margin-left: 10px;
+}
+#regresar{
+      margin-right: 10px;
+}
+          
