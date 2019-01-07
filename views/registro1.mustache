@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registro</title>
+        <link rel="icon" type="image/png" href="Imagenes/Icono.ico" />
+        <title>PackTex -Registrarse</title>
         <link href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="newcss2.css" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -15,51 +15,76 @@
 
     </head>
 
-   <body background="https://resi.ze-robot.com/images/go/google-wallpapers-25-of-my-favorite-wallpaper-sized-illustrations-by-google-17-1024%C3%97768.jpg" >
+   <body style="background-color: #DFDFDF;" >
 
 
-   <center><img id="imagen" style="float:top; margin:1px;" alt="" src="http://ferraratattooconvention.it/tatuatori/view/img/marker.svg" width="70" height="70" />
-   </center> <font face="SimSun-ExtB" size="7" color="black"> <center id="titulo2">PackTex</center></font>
-  <center> <div  class="container well"id="contendor">
-	<div id="registrar">
+    <h2 class="logo">
+      <center>
+    <img id="imagen" style="float:top; margin:1px;" alt="" src="Imagenes/Icono.ico" width="100" height="100" />
+     <font face="Courier" size="8" color="black">PackTex</font>
+    </center>
+    </h2>
 
-	<div id="envoltura">
-
+    
+        
+    <h2><center>
+        <div  class="container well"id="contendor">
+        
+        <div id="registrar">
+          <div id="envoltura">
             <div id="contenedor" >
+              <div id="cuerpo">
 
-			<div id="cuerpo">
         <form action="/registro" method="post">
 
               <div class="form-group">
-              <input name ="nombre" required class="form-control input-lg" type="text" placeholder="Nombre">
+              <input name ="nombre" required pattern="[a-zA-Z]*" class="form-control input-lg" type="text" placeholder="Nombre">
               </div>
-					    <div class="form-group">
-              <input name="apellido" required class="form-control input-lg" type="text" placeholder="Apellido">
-						  </div>
-						  
-	      <div class="form-group">
-              <input name="fecha_de_nacimiento"  required class="form-control input-lg" type="date" placeholder="Fecha de nacimiento" max="2000-12-10" required>
+              <div class="form-group">
+              <input name="apellido" required pattern="[a-zA-Z]*" class="form-control input-lg" type="text" placeholder="Apellido">
+              </div>
+              
+        <div class="form-group">
+              <input name="fecha_de_nacimiento" required class="form-control input-lg" type="date" placeholder="Fecha de nacimiento" max="2000-12-10" required>
              </div>
-	     
+       
               <div class="bootstrap-iso">
-					    <div class="form-group">
+              <div class="form-group">
               <input name="correo" type="email" required class="form-control input-lg" id="exampleInputEmail1" placeholder="E-mail">
               </div>
               <div class="form-group">
-              <input name="clave" type="password" required class="form-control input-lg" pattern="(?=.*\d)(?=.*[a-záéíóúüñ]).*[A-ZÁÉÍÓÚÜÑ].*"  pattern=".{8,}"  id="exampleInputPassword1" placeholder="Clave">
-              </div>
-	      
+              </center>
+      </h2>
+        <h2>
+          <center>
+              <div  class="container well"id="contendor2" > 
+        <div id="registrar">
+          <div id="envoltura">
+            <div id="contenedor">
+              <div id="cuerpo">
               
-              <button type="submit" class="btn btn-success btn-lg"id="registrar">Registrar</button>
-
-				</form>
-                        </div>
-			</div>
-
-		</div><!-- fin contenedor -->
-
+              <input name="clave" type="password" required class="form-control input-lg" pattern="(?=.*\d)(?=.*[a-záéíóúüñ]).*[A-ZÁÉÍÓÚÜÑ].*.{8,}"  id="exampleInputPassword1" placeholder="Clave">
+              </div>
+              <h2 class="texto">
+              <font face="Arial" size="2" color="black"><strong>La clave debe contener mínimo 8 caracteres (mayúsculas, minúsculas, números y caracteres especiales).</strong></font>
+              </h2>
+              
+            </div>
+          </div><!-- fin contenedor -->
         </div>
-      </center>
+    </center></h2>
+<center>
+                <button type="submit" style='width:190px; height:40px' class="btn btn-success btn-lg"id="registrar"><strong>Registrarme</strong></button>
+              </center>
+              <br>
+        </form>
+      </div>
+    </div>
+  </div><!-- fin contenedor -->
+</div>
+
+  
+	
 </body>
 
 </html>
