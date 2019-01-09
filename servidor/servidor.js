@@ -1,7 +1,7 @@
 var express = require('express'),
     authentication = require('express-authentication'),
     app = express();
-var request = require('request');
+
 const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
 const {Client} = require('pg');
@@ -39,10 +39,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 var sesion;
 
 
-app.get('/', (req, res) =>{
-  res.redirect('/login')
 
-});
     app.get('/principal', (req, res) =>{
       res.render('inicio1')
     });
@@ -51,6 +48,36 @@ app.get('/orden', (req, res) =>{
   res.render('orden')
 });
 
+  app.get('/principal', (req, res) =>{
+    const cliente = new Client();
+    cliente.connect()
+      .then(() => {
+        const sqlDireccion = 'SELECT * FROM direccion_salida WHERE id_usuario = $1'
+        const parametro = [sesion.sIdUsuario]
+        return cliente.query(sqlDireccion, parametro);
+
+      })
+      .then((resultado) => {
+      console.log(resultado);
+                        const cliente = new Client();
+                        cliente.connect()
+                          .then(() => {
+                            const sqlOrden = 'SELECT * FROM orden WHERE id_usuario = $1'
+                            const parametros = [sesion.sIdUsuario]
+
+                            return cliente.query(sqlOrden, parametros);
+
+                          })
+                          .then((resultado2) => {
+                          console.log(resultado2);
+
+        res.render('inicio1',{
+          direccion: resultado.rows[0],
+          llegada:resultado2.rows[0]
+});
+});
+});
+});
 
 app.get('/inicio', (req, res) =>{
 res.render('inicio')
@@ -89,38 +116,6 @@ res.render('inicio')
   app.get('/login', (req, res) =>{
     res.render('login1')
   });
-
-  app.get('/mapa', (req, res) =>{
-    const cliente = new Client();
-    cliente.connect()
-      .then(() => {
-        const sqlDireccion = 'SELECT * FROM direccion_salida WHERE id_usuario = $1'
-        const parametro = [sesion.sIdUsuario]
-        return cliente.query(sqlDireccion, parametro);
-
-      })
-      .then((resultado) => {
-      console.log(resultado);
-                        const cliente = new Client();
-                        cliente.connect()
-                          .then(() => {
-                            const sqlOrden = 'SELECT * FROM orden WHERE id_usuario = $1'
-                            const parametros = [sesion.sIdUsuario]
-
-                            return cliente.query(sqlOrden, parametros);
-
-                          })
-                          .then((resultado2) => {
-                          console.log(resultado2);
-
-        res.render('mapa',{
-          direccion: resultado.rows[0],
-          llegada:resultado2.rows[0]
-});
-});
-});
-});
-
 
   app.post('/login', (req, res) =>{
     sesion = req.session;
@@ -217,14 +212,7 @@ res.render('inicio')
         });
     });
 
-app.post('/mapa', (req, res) =>{
-  request('http://www.mapquestapi.com/geocoding/v1/batch?key=PpyBjKLGorrBKzyNPRj0OadzL5oWqssN&location=Denver,CO&location=Boulder,CO', function (error, response, body) {
-  console.log('error:', error); // Print the error if one occurred
-  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-  console.log('body:', body); // Print the HTML for the Google homepage.
-});
 
-  });
 
 app.listen(port, () =>{
   console.log(`Servidor funcionando en el puerto: ${port}`);
