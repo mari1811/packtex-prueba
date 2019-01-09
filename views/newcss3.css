@@ -4,14 +4,13 @@
 }
 
 .fondo{
-	background-image: url(Imagenes/fondo_principal.jpg);
+	background-color:#4CA5BF;
 
 	height: 140px;
 }
 
 .border{
 	border: 5px;
-	border-color: black;
 }
 
 .caja_padre{
@@ -27,35 +26,31 @@
 	height: 415px;
 	background-color: #DFDFDF;
 	position: relative;
-	border: 6px inset #7D837D;
 	margin-left: 1%;
 }
 
 #boton_orden{
-	background-color: #FFFFFF;
-    border-color: white;
-    border-bottom-color: green;
+
     height: 50px;
     width: 280px;
-    color:black;
     margin-left: 35%;
     padding: 5px;
 }
 
-#boton_mapa{
-	background-color: #FFFFFF;
-	
-    border-color: white;
-    border-bottom-color: green;
+#boton_cerrar{
+
     height: 50px;
     width: 280px;
-    color:black;
     padding: 5px;
 }
 #mapa{
-    
+  width:430px;
+height: 415px;
+background-color: #DFDFDF;
+position: relative;
+margin-left: 1%;
+
 }
 #orden{
       margin-right: 10px;
 }
-   
