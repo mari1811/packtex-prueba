@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="icon" type="image/png" href="Imagenes/Icono.ico" />
-        <title>Generar Orden</title>
+	    <link rel="icon" type="image/png" href="Icono.ico" />
+        <title>Orden</title>
         <link href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css_orden.css" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -15,50 +15,60 @@
 
     </head>
 
-   <body background="Imagenes/fondo_principal.jpg">
+  <body style="background-color:#4CA5BF;" >
 
-   <div>
-   <img style="float:top; margin:3%;" alt="" src="Imagenes/Icono.ico" width="120" height="120" />
-   <a style="margin-left: 3%" ><font face="Auriel" size="6" color="white">Sigue los pasos y genera tu orden...</font></a>
-   </div>
+    <h2 class="logo">
+      <center>
+    <img id="imagen" style="float:top; margin:1px;" alt="" src="Icono.ico" width="100" height="100" />
+     <font face="Courier" size="8" color="black">PackTex</font>
+    </center>
+    </h2>
 
-   <div>
-   <a style="margin-left: 3%;"><font face="SimSun-ExtB" size="5" color="black"> <id="texto"><strong>Ingrese los siguientes datos</strong></font></a>
-   </div>
+ </center> <font face="SimSun-ExtB" size="5" color="black"> <center id="texto">Coloque los datos de su orden:</center></font>
+  <center> <div  class="container well"id="contendor">
+	<div id="orden">
 
-   <br>
+	<div id="envoltura">
 
-    
-      <div >
-        <h2 class="caja_1">
+            <div id="contenedor" >
+
+			<div id="cuerpo">
         <form action="/orden" method="post">
-        <a><font face="Auriel" size="4" color="black">Dirección de recolección:<input name ="direccion_salida" required class="form-control input-lg" type="text" placeholder=" "></font></a>
 
-        <a><font face="Auriel" size="4" color="black">Peso del paquete (kg):<input name="peso_paquete"  required type="number" min="1" max="999" class="form-control input-lg" placeholder=""></font></a>
+              <div class="form-group">
+	      <text>Dirección de recolección: </text>
+              <input name ="direccion_salida" required class="form-control input-lg" type="text" placeholder=" ">
+              </div>
+					    <div class="form-group">
+	<text>Peso del paquete (kg): </text>
+              <input name="peso_paquete"  required type="number" min="1" max="999" class="form-control input-lg" placeholder="">
+						  </div>
+              <div class="bootstrap-iso">
+					    <div class="form-group">
+		<text>Dirección de entrega: </text>
+              <input name="direccion_entrega"  required type="text" class="form-control input-lg" placeholder="">
+              </div>
+              <div class="form-group">
+	      <text>Descripción del lugar: </text>
+              <textarea name="descripcion_direccion_entrega"  required class="form-control" maxlength="140" rows="5" placeholder=""></textarea>
+              </div>
+	      <div class="form-group">
+	      <text>Nombre de destinatario: </text>
+              <input name="nombre_persona_entrega" pattern="[a-zA-Z]*"  required type="text" class="form-control input-lg"  placeholder="Nombre">
+              </div>
+	      <div class="form-group">
+              <input name="apellido_persona_entrega" pattern="[a-zA-Z]*" required type="text" class="form-control input-lg"  placeholder="Apellido">
+              </div>
+              <a href="/principal" ><button type="submit" style='width:200px; height:50px' class="btn btn-success btn-lg"id="enviar">Enviar</button></a>
 
-        <a><font face="Auriel" size="4" color="black">Dirección de entrega:<input name="direccion_entrega"  required type="text" class="form-control input-lg" placeholder=""></font></a>
-        <br>
-        </form>
-        </h2>
-      </div>
-    
+				</form>
+                        </div>
+			</div>
 
-    <div>
-      <h2 class="caja_2">
-      <a><font face="Auriel" size="4" color="black">Descripción del lugar: <textarea name="descripcion_direccion_entrega"  required class="form-control" maxlength="140" rows="5" placeholder=""></textarea></font></a>
+		</div><!-- fin contenedor -->
 
-      <a><font face="Auriel" size="4" color="black">Nombre de destinatario:<input name="nombre_persona_entrega" pattern="[a-zA-Z]*"  required type="text" class="form-control input-lg"  placeholder="Nombre"></font></a>
-
-      <a><input name="apellido_persona_entrega" pattern="[a-zA-Z]*" required type="text" class="form-control input-lg"  placeholder="Apellido"></a>
-      <br>
-
-      <a href="/principal" ><button type="submit" style='width:200px; height:50px; margin-left: 130%; position: relative;' class="btn btn-success btn-lg"id="enviar">Enviar</button></a>
-
-      </h2>
-    </div>
-
-    <br>
+        </div>
+      </center>
 </body>
 
 </html>
-
