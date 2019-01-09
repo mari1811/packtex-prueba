@@ -1,22 +1,18 @@
 <html>
   <head>
-    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
-  <form action="/mapa" method="post">
     <script type="text/javascript">
-      window.onload = function() {
-        L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
-
-        var map = L.mapquest.map('map', {
-          center: [10.464607, -66.976340],
-          layers: L.mapquest.tileLayer('map'),
-          zoom: 12
-        });
-
-        map.addControl(L.mapquest.control());
-      }
-    </script>
-    </from>
+      {{#direccion}}
+      {{#llegada}}
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item">'{{direccionSalida}}'</li>
+    <li class="list-group-item">{{direccionSalida}}</li>
+    <li class="list-group-item">"{{direccionSalida}}"</li>
+    <li class="list-group-item">Prueba</li>
+    <li class="list-group-item">Listas</li>
+  </ul>
+           {{/llegada}}
+          {{/direccion}}
+          </script>
   </head>
 
   <body style="border: 0; margin: 0;">
