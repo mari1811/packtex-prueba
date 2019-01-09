@@ -2,28 +2,28 @@
 }
 
 .fondo{
-	
+	background-color: #4AC526;
 }
 
-.caja_1{
-	background-color: #B0FFC3;
-	width:400px;
-	height: 400px;
-	margin-left: 5%;
-	margin-right: 0%;
-	padding: 15px;
-	position: relative;
-	float: left;
+#contendor2{
+    width: 450px;
+    height: 200px;
+    padding: 15px;
+
+    position: static;
 }
 
-.caja_2{
-	background-color: #B0FFC3;
-	width:400px;
-	height: 400px;
-	margin-left: 40%;
-	margin-right: 0%;
-	padding: 15px;
-	position: relative;
+.texto{
+	line-height: 0.5em;
+	    position: relative;
+
+}
+
+
+#contendor{
+    width: 450px;
+    height: 610px;
+    padding: 15px;
 }
 
 #titulo2{
@@ -31,10 +31,6 @@
 
 }
 #registrar{
-    
+
      margin-left: 10px;
-}
-#regresar{
-      margin-right: 10px;
-}
-          
+}  
