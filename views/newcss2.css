@@ -1,12 +1,13 @@
+
 #body{
 }
 
 .fondo{
-	background-color: #DFDFDF;
+	background-color: #4AC526;
 }
 
 #contendor2{
-    width: 350px;
+    width: 450px;
     height: 160px;
     padding: 15px;
 
@@ -21,7 +22,7 @@
 
 
 #contendor{
-    width: 350px;
+    width: 450px;
     height: 270px;
     padding: 15px;
 }
@@ -31,9 +32,6 @@
 
 }
 #registrar{
-    
+
      margin-left: 10px;
 }
-#regresar{
-      margin-right: 10px;
-}    
