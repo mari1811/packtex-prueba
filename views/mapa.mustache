@@ -15,13 +15,13 @@
            </script>
     <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
     <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
-{{#direccion}}
-{{#llegada}}
+{{#direccion[]}}
+{{#llegada[]}}
     <script type="text/javascript">
       window.onload = function() {
         L.mapquest.key = 'PpyBjKLGorrBKzyNPRj0OadzL5oWqssN';
         // Geocode three locations, then call the createMap callback
-        L.mapquest.geocoding().geocode(['{{direccionSalida}}','{{direccionEntrega}}'], createMap);
+        L.mapquest.geocoding().geocode(['{{direccionSalida[]}}','{{direccionEntrega[]}}'], createMap);
         function createMap(error, response) {
           // Initialize the Map
           var map = L.mapquest.map('map', {
@@ -49,8 +49,8 @@
         }
       }
     </script>
-    {{/llegada}}
-    {{/direccion}}
+    {{/llegada[]}}
+    {{/direccion[]}}
 
   </head>
 
@@ -72,19 +72,19 @@
     </div>
 
      <div>
-      {{#direccion}}
-      {{#llegada}}
+      {{#direccion[]}}
+      {{#llegada[]}}
 <div class="list-group">
   <a class="list-group-item list-group-item-action" data-toggle="modal" data-target="#exampleModal">
-    Salida: {{direccionSalida}}  / Destino:{{direccionEntrega}}
+    Salida: {{direccionSalida[0]}}  / Destino:{{direccionEntrega[0]}}
   </a>
-  <a href="/orden" class="list-group-item list-group-item-action"></a>
-  <a href="/orden" class="list-group-item list-group-item-action"></a>
-  <a href="/orden" class="list-group-item list-group-item-action"></a>
+  <a href="/orden" class="list-group-item list-group-item-action">Salida: {{direccionSalida[1]}}  / Destino:{{direccionEntrega[1]}}</a>
+  <a href="/orden" class="list-group-item list-group-item-action">Salida: {{direccionSalida[2]}}  / Destino:{{direccionEntrega[2]}}</a>
+  <a href="/orden" class="list-group-item list-group-item-action">Salida: {{direccionSalida[3]}}  / Destino:{{direccionEntrega[3]}}</a>
   <a href="/orden" class="list-group-item list-group-item-action"></a>
 </div>
-           {{/llegada}}
-          {{/direccion}}
+           {{/llegada[]}}
+          {{/direccion[]}}
           </div>
           
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
