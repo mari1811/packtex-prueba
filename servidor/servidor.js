@@ -79,9 +79,6 @@ app.get('/orden', (req, res) =>{
 });
 });
 
-  app.get('/miModal', (req, res) =>{
-    res.render('miModal')
-  });
 
 
 app.get('/inicio', (req, res) =>{
