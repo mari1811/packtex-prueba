@@ -86,8 +86,12 @@
        <center> <p>¿Desea eliminar esta orden?</p></center>
       </div>
       <div class="modal-footer">
-        <center><a href="/mapa"><button type="button" class="btn btn-danger">Eliminar</button></a>
-        <a href="/mapa"><button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button></a></center>
+      
+       <form action="/eliminar" method="post">
+        <button type="button" class="btn btn-danger">Eliminar</button>
+        </form>
+        
+        <a href="/mapa"><button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button></a>
       </div>
     </div>
   </div>
