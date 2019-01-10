@@ -72,8 +72,8 @@ app.get('/orden', (req, res) =>{
                           console.log(resultado2);
 
         res.render('mapa',{
-          direccion[]: resultado.rows[],
-          llegada[]:resultado2.rows[]
+          direccion: resultado.rows,
+          llegada:resultado2.rows
 });
 });
 });
