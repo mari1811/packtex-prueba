@@ -21,7 +21,7 @@
       window.onload = function() {
         L.mapquest.key = 'PpyBjKLGorrBKzyNPRj0OadzL5oWqssN';
         // Geocode three locations, then call the createMap callback
-        L.mapquest.geocoding().geocode(['{{direccionEntrega[0]}}','{{direccionEntrega[1]}}'], createMap);
+        L.mapquest.geocoding().geocode(['{{direccionEntrega}}','{{direccionEntrega}}'], createMap);
         function createMap(error, response) {
           // Initialize the Map
           var map = L.mapquest.map('map', {
