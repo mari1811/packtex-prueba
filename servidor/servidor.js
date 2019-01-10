@@ -80,6 +80,9 @@ app.get('/orden', (req, res) =>{
 });
 
 
+ // app.post('/eliminar', (req, res) =>{
+
+
 
 app.get('/inicio', (req, res) =>{
 res.render('inicio')
