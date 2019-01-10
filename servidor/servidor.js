@@ -81,12 +81,6 @@ app.get('/orden', (req, res) =>{
 
 
 
-  app.get('/eliminar', (req, res) =>{
-    res.render('eliminar')
-  });
-
-
-
 app.get('/inicio', (req, res) =>{
 res.render('inicio')
     res.redirect('/login');
