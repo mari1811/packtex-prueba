@@ -73,9 +73,6 @@
       {{#direccion}}
       {{#llegada}}
 <div class="list">
-  <a  class="list-group-item list-group-item-action" data-toggle="modal" data-target="#miModal">
-    Salida: {{direccionSalida}}  / Destino:{{direccionEntrega}}
-    
 <div class="modal" tabindex="-1" role="dialog" id=miModal>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -98,6 +95,9 @@
 </div>
   </a>
 </div>
+  <a  class="list-group-item list-group-item-action" data-toggle="modal" data-target="#miModal">
+    Salida: {{direccionSalida}}  / Destino:{{direccionEntrega}}
+    </a>
            {{/llegada}}
           {{/direccion}}
           </div>
