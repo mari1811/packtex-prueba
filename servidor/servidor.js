@@ -48,7 +48,7 @@ app.get('/orden', (req, res) =>{
   res.render('orden')
 });
 
-  app.get('/principal', (req, res) =>{
+  app.get('/mapa', (req, res) =>{
     const cliente = new Client();
     cliente.connect()
       .then(() => {
@@ -71,7 +71,7 @@ app.get('/orden', (req, res) =>{
                           .then((resultado2) => {
                           console.log(resultado2);
 
-        res.render('principal',{
+        res.render('mapa',{
           direccion: resultado.rows[0],
           llegada:resultado2.rows[0]
 });
@@ -142,7 +142,7 @@ res.render('inicio')
 
           sesion.sIdUsuario = resultado.rows[0].idUsuario;
 
-            res.redirect('/principal')
+            res.redirect('/mapa')
 
 
           } else {
@@ -205,7 +205,7 @@ res.render('inicio')
                                 console.log(err);
                                 res.send('Error Registrando paquete');
                               });
-          res.redirect('/principal')
+          res.redirect('/mapa')
         }).catch((err) => {
           console.log(err);
           res.send('Ocurrio un error registrando direccion salida');
