@@ -65,9 +65,16 @@
 
         <a class="caja_padre"><font face="Arial" size="4" color="black"><strong>↓↓ Listado de tus órdenes</strong></a>
 
-        <a href="/orden" ><button type="submit" class="btn btn-success"  id="boton_orden">Crear una orden</button></a>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Menu
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="/orden">Crear Orden</a>
+    <a class="dropdown-item" href="/login">Cerrar sesion</a>
+  </div>
+  </div>
 
-        <a href="/login" ><button type="submit" class="btn btn-danger"  id="boton_cerrar">Cerrar Sesión</button></a>
 
     </div>
 
