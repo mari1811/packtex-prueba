@@ -79,6 +79,55 @@ app.get('/orden', (req, res) =>{
 });
 });
 
+
+
+
+
+
+
+  app.get('/eliminar', (req, res) =>{
+    const cliente = new Client();
+    cliente.connect()
+      .then(() => {
+        const sqlDireccion = 'SELECT * FROM direccion_salida WHERE id_usuario = $1'
+        const parametro = [sesion.sIdUsuario]
+        return cliente.query(sqlDireccion, parametro);
+
+      })
+      .then((resultado) => {
+      console.log(resultado);
+                        const cliente = new Client();
+                        cliente.connect()
+                          .then(() => {
+                            const sqlOrden = 'SELECT * FROM orden WHERE id_usuario = $1'
+                            const parametros = [sesion.sIdUsuario]
+
+                            return cliente.query(sqlOrden, parametros);
+
+                          })
+                          .then((resultado2) => {
+                          console.log(resultado2);
+
+        res.render('eliminar',{
+          direccion: resultado.rows,
+          llegada:resultado2.rows
+});
+});
+});
+});
+
+  app.get('/eliminar', (req, res) =>{
+    res.render('eliminar')
+  });
+
+
+
+
+
+
+
+
+
 app.get('/inicio', (req, res) =>{
 res.render('inicio')
     res.redirect('/login');
